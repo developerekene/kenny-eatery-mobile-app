@@ -16,7 +16,7 @@ export default function HeaderTab() {
 
 const HeaderButton = (props) => (
      <View style={{
-          marginTop: 50
+          // marginTop: 50
      }}>
           <TouchableOpacity style={{
                backgroundColor: props.activeTab === props.text ? "black" : "white",

@@ -1,11 +1,17 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, ScrollView  } from 'react-native'
 import React from 'react'
+import { SafeAreaView } from "react-native-safe-area-context";
+
+
 import HeaderTab from '../Components/HeaderTab'
 import SearchBar from '../Components/SearchBar'
 import Categories from '../Components/Categories'
+import RestaurantItem from '../Components/RestaurantItem'
+
 
 export default function Home() {
   return (
+
      <SafeAreaView style={{
           backgroundColor: "#eee",
           // flex: 1
@@ -18,8 +24,13 @@ export default function Home() {
                     <SearchBar />
                     
                </View>
-               <Categories />
-          
+               <ScrollView showsVerticalScrollIndicator={false}>
+                    <Categories />
+                    <RestaurantItem />
+                    <RestaurantItem />
+                    <RestaurantItem />
+                    <RestaurantItem />
+               </ScrollView>
      </SafeAreaView>
   )
 }
